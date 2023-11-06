@@ -6,11 +6,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Base_Form_1.Classes
+namespace WDFBanKinhMat.Classes
 {
     internal class DataConnect
     {
-        string strCon = "";
+        string strCon = "Data Source=COVANAN\\SQLEXPRESS;Initial Catalog=WDFBanKinhMat;Integrated Security=True";
         SqlConnection sqlCon = null;
 
         private void OpenData()

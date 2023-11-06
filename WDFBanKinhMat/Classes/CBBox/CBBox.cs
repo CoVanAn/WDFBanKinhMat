@@ -15,7 +15,12 @@ namespace WDFBanKinhMat.Classes.CBBox
             comboName.DataSource = dataTable;
             comboName.DisplayMember = displayMember;
             comboName.ValueMember = Value;
-
+        }
+        public void FillListBox(ListBox listName, DataTable dataTable, string displayMember, string Value)
+        {
+            listName.DataSource = dataTable;
+            listName.DisplayMember = displayMember;
+            listName.ValueMember = Value;
         }
     }
 }
