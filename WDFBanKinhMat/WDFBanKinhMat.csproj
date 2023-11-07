@@ -46,8 +46,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BLL\SanPham.cs" />
-    <Compile Include="BLL\SanPhamBLL.cs" />
     <Compile Include="Classes\CBBox\CBBox.cs" />
     <Compile Include="Classes\DataConnect.cs" />
     <Compile Include="frm_Menu.cs">
