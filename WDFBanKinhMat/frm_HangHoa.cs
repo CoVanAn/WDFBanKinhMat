@@ -124,6 +124,7 @@ namespace WDFBanKinhMat
             MaLoai = int.Parse(lstLoaiSP.SelectedValue.ToString());
             TimKiemSanPham(GiaBanTu, GiaBanDen, MaLoai, MaMau, MaCL, MaDangMat);
         }
+
         private void lstChatLieu_Click(object sender, EventArgs e)
         {
             MaCL = int.Parse(lstChatLieu.SelectedValue.ToString());
@@ -139,21 +140,25 @@ namespace WDFBanKinhMat
             MaDangMat = int.Parse(lstDangMat.SelectedValue.ToString());
             TimKiemSanPham(GiaBanTu, GiaBanDen, MaLoai, MaMau, MaCL, MaDangMat);
         }
-        private void menuitemThemSP_Click(object sender, EventArgs e)
+
+        private void menuItemThemSP_Click(object sender, EventArgs e)
+        {
+            frm_ThemSanPham frmThem = new frm_ThemSanPham();
+            frmThem.ShowDialog();
+            
+        }
+
+        private void menuItemSuaSP_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void menuitemSuaSP_Click(object sender, EventArgs e)
+        private void menuItemXoaSP_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void menuitemXoaSP_Click(object sender, EventArgs e)
-        {
 
-        }
-        
         private void btnLocLai_Click(object sender, EventArgs e)
         {
             lstChatLieu.SelectedIndex = -1;

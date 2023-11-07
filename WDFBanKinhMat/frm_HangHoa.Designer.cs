@@ -30,6 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.lstDangMat = new System.Windows.Forms.ListBox();
             this.btnLocLai = new System.Windows.Forms.Button();
             this.grbMauSac = new System.Windows.Forms.GroupBox();
             this.lstMau = new System.Windows.Forms.ListBox();
@@ -44,9 +46,9 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.lvSanPham = new System.Windows.Forms.ListView();
             this.ctmnSanPham = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.menuitemThemSP = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuitemSuaSP = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuitemXoaSP = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuItemThemSP = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuItemSuaSP = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuItemXoaSP = new System.Windows.Forms.ToolStripMenuItem();
             this.imageList = new System.Windows.Forms.ImageList(this.components);
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lblDangMat = new System.Windows.Forms.Label();
@@ -68,9 +70,8 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.lstDangMat = new System.Windows.Forms.ListBox();
             this.panel1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.grbMauSac.SuspendLayout();
             this.grbChatLieu.SuspendLayout();
             this.grbLoaiHang.SuspendLayout();
@@ -78,7 +79,6 @@
             this.panel2.SuspendLayout();
             this.ctmnSanPham.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -95,6 +95,31 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(166, 753);
             this.panel1.TabIndex = 0;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.lstDangMat);
+            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupBox2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.Location = new System.Drawing.Point(0, 560);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(166, 140);
+            this.groupBox2.TabIndex = 9;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Dạng mắt";
+            // 
+            // lstDangMat
+            // 
+            this.lstDangMat.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lstDangMat.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lstDangMat.FormattingEnabled = true;
+            this.lstDangMat.ItemHeight = 22;
+            this.lstDangMat.Location = new System.Drawing.Point(3, 26);
+            this.lstDangMat.Margin = new System.Windows.Forms.Padding(10);
+            this.lstDangMat.Name = "lstDangMat";
+            this.lstDangMat.Size = new System.Drawing.Size(160, 111);
+            this.lstDangMat.TabIndex = 3;
+            this.lstDangMat.Click += new System.EventHandler(this.lstDangMat_Click);
             // 
             // btnLocLai
             // 
@@ -266,32 +291,32 @@
             this.ctmnSanPham.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ctmnSanPham.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.ctmnSanPham.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.menuitemThemSP,
-            this.menuitemSuaSP,
-            this.menuitemXoaSP});
+            this.menuItemThemSP,
+            this.menuItemSuaSP,
+            this.menuItemXoaSP});
             this.ctmnSanPham.Name = "ctmnSanPham";
-            this.ctmnSanPham.Size = new System.Drawing.Size(203, 82);
+            this.ctmnSanPham.Size = new System.Drawing.Size(211, 110);
             // 
-            // menuitemThemSP
+            // menuItemThemSP
             // 
-            this.menuitemThemSP.Name = "menuitemThemSP";
-            this.menuitemThemSP.Size = new System.Drawing.Size(202, 26);
-            this.menuitemThemSP.Text = "Thêm sản phẩm";
-            this.menuitemThemSP.Click += new System.EventHandler(this.menuitemThemSP_Click);
+            this.menuItemThemSP.Name = "menuItemThemSP";
+            this.menuItemThemSP.Size = new System.Drawing.Size(210, 26);
+            this.menuItemThemSP.Text = "Thêm sản phẩm";
+            this.menuItemThemSP.Click += new System.EventHandler(this.menuItemThemSP_Click);
             // 
-            // menuitemSuaSP
+            // menuItemSuaSP
             // 
-            this.menuitemSuaSP.Name = "menuitemSuaSP";
-            this.menuitemSuaSP.Size = new System.Drawing.Size(202, 26);
-            this.menuitemSuaSP.Text = "Sửa sản phẩm";
-            this.menuitemSuaSP.Click += new System.EventHandler(this.menuitemSuaSP_Click);
+            this.menuItemSuaSP.Name = "menuItemSuaSP";
+            this.menuItemSuaSP.Size = new System.Drawing.Size(210, 26);
+            this.menuItemSuaSP.Text = "Sửa sản phẩm";
+            this.menuItemSuaSP.Click += new System.EventHandler(this.menuItemSuaSP_Click);
             // 
-            // menuitemXoaSP
+            // menuItemXoaSP
             // 
-            this.menuitemXoaSP.Name = "menuitemXoaSP";
-            this.menuitemXoaSP.Size = new System.Drawing.Size(202, 26);
-            this.menuitemXoaSP.Text = "Xóa sản phẩm";
-            this.menuitemXoaSP.Click += new System.EventHandler(this.menuitemXoaSP_Click);
+            this.menuItemXoaSP.Name = "menuItemXoaSP";
+            this.menuItemXoaSP.Size = new System.Drawing.Size(210, 26);
+            this.menuItemXoaSP.Text = "Xóa sản phẩm";
+            this.menuItemXoaSP.Click += new System.EventHandler(this.menuItemXoaSP_Click);
             // 
             // imageList
             // 
@@ -509,31 +534,6 @@
             this.label8.TabIndex = 22;
             this.label8.Text = "Màu:";
             // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.lstDangMat);
-            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupBox2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(0, 560);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(166, 140);
-            this.groupBox2.TabIndex = 9;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Dạng mắt";
-            // 
-            // lstDangMat
-            // 
-            this.lstDangMat.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lstDangMat.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lstDangMat.FormattingEnabled = true;
-            this.lstDangMat.ItemHeight = 22;
-            this.lstDangMat.Location = new System.Drawing.Point(3, 26);
-            this.lstDangMat.Margin = new System.Windows.Forms.Padding(10);
-            this.lstDangMat.Name = "lstDangMat";
-            this.lstDangMat.Size = new System.Drawing.Size(160, 111);
-            this.lstDangMat.TabIndex = 3;
-            this.lstDangMat.Click += new System.EventHandler(this.lstDangMat_Click);
-            // 
             // frm_HangHoa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -545,6 +545,7 @@
             this.Text = "HangHoa";
             this.Load += new System.EventHandler(this.frm_HangHoa_Load);
             this.panel1.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
             this.grbMauSac.ResumeLayout(false);
             this.grbChatLieu.ResumeLayout(false);
             this.grbLoaiHang.ResumeLayout(false);
@@ -554,7 +555,6 @@
             this.ctmnSanPham.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -595,9 +595,9 @@
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.ImageList imageList;
         private System.Windows.Forms.ContextMenuStrip ctmnSanPham;
-        private System.Windows.Forms.ToolStripMenuItem menuitemThemSP;
-        private System.Windows.Forms.ToolStripMenuItem menuitemSuaSP;
-        private System.Windows.Forms.ToolStripMenuItem menuitemXoaSP;
+        private System.Windows.Forms.ToolStripMenuItem menuItemThemSP;
+        private System.Windows.Forms.ToolStripMenuItem menuItemSuaSP;
+        private System.Windows.Forms.ToolStripMenuItem menuItemXoaSP;
         private System.Windows.Forms.Label lblDangMat;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.GroupBox groupBox2;
