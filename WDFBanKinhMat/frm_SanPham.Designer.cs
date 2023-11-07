@@ -1,6 +1,6 @@
 ﻿namespace WDFBanKinhMat
 {
-    partial class frm_HangHoa
+    partial class frm_SanPham
     {
         /// <summary>
         /// Required designer variable.
@@ -93,7 +93,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(166, 753);
+            this.panel1.Size = new System.Drawing.Size(166, 803);
             this.panel1.TabIndex = 0;
             // 
             // groupBox2
@@ -269,7 +269,7 @@
             this.panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel2.Location = new System.Drawing.Point(166, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(966, 753);
+            this.panel2.Size = new System.Drawing.Size(966, 803);
             this.panel2.TabIndex = 1;
             // 
             // lvSanPham
@@ -281,7 +281,7 @@
             this.lvSanPham.Location = new System.Drawing.Point(0, 140);
             this.lvSanPham.Margin = new System.Windows.Forms.Padding(10);
             this.lvSanPham.Name = "lvSanPham";
-            this.lvSanPham.Size = new System.Drawing.Size(966, 613);
+            this.lvSanPham.Size = new System.Drawing.Size(966, 663);
             this.lvSanPham.TabIndex = 1;
             this.lvSanPham.UseCompatibleStateImageBehavior = false;
             this.lvSanPham.Click += new System.EventHandler(this.lvSanPham_Click);
@@ -295,26 +295,26 @@
             this.menuItemSuaSP,
             this.menuItemXoaSP});
             this.ctmnSanPham.Name = "ctmnSanPham";
-            this.ctmnSanPham.Size = new System.Drawing.Size(211, 110);
+            this.ctmnSanPham.Size = new System.Drawing.Size(203, 82);
             // 
             // menuItemThemSP
             // 
             this.menuItemThemSP.Name = "menuItemThemSP";
-            this.menuItemThemSP.Size = new System.Drawing.Size(210, 26);
+            this.menuItemThemSP.Size = new System.Drawing.Size(202, 26);
             this.menuItemThemSP.Text = "Thêm sản phẩm";
             this.menuItemThemSP.Click += new System.EventHandler(this.menuItemThemSP_Click);
             // 
             // menuItemSuaSP
             // 
             this.menuItemSuaSP.Name = "menuItemSuaSP";
-            this.menuItemSuaSP.Size = new System.Drawing.Size(210, 26);
+            this.menuItemSuaSP.Size = new System.Drawing.Size(202, 26);
             this.menuItemSuaSP.Text = "Sửa sản phẩm";
             this.menuItemSuaSP.Click += new System.EventHandler(this.menuItemSuaSP_Click);
             // 
             // menuItemXoaSP
             // 
             this.menuItemXoaSP.Name = "menuItemXoaSP";
-            this.menuItemXoaSP.Size = new System.Drawing.Size(210, 26);
+            this.menuItemXoaSP.Size = new System.Drawing.Size(202, 26);
             this.menuItemXoaSP.Text = "Xóa sản phẩm";
             this.menuItemXoaSP.Click += new System.EventHandler(this.menuItemXoaSP_Click);
             // 
@@ -360,9 +360,9 @@
             this.lblDangMat.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDangMat.Location = new System.Drawing.Point(585, 62);
             this.lblDangMat.Name = "lblDangMat";
-            this.lblDangMat.Size = new System.Drawing.Size(63, 22);
+            this.lblDangMat.Size = new System.Drawing.Size(25, 22);
             this.lblDangMat.TabIndex = 35;
-            this.lblDangMat.Text = "Mã SP";
+            this.lblDangMat.Text = "...";
             // 
             // label3
             // 
@@ -380,9 +380,9 @@
             this.lblGiaNhap.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblGiaNhap.Location = new System.Drawing.Point(773, 93);
             this.lblGiaNhap.Name = "lblGiaNhap";
-            this.lblGiaNhap.Size = new System.Drawing.Size(63, 22);
+            this.lblGiaNhap.Size = new System.Drawing.Size(25, 22);
             this.lblGiaNhap.TabIndex = 33;
-            this.lblGiaNhap.Text = "Mã SP";
+            this.lblGiaNhap.Text = "...";
             // 
             // label4
             // 
@@ -400,9 +400,9 @@
             this.lblGiaBan.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblGiaBan.Location = new System.Drawing.Point(773, 64);
             this.lblGiaBan.Name = "lblGiaBan";
-            this.lblGiaBan.Size = new System.Drawing.Size(63, 22);
+            this.lblGiaBan.Size = new System.Drawing.Size(25, 22);
             this.lblGiaBan.TabIndex = 31;
-            this.lblGiaBan.Text = "Mã SP";
+            this.lblGiaBan.Text = "...";
             // 
             // label1
             // 
@@ -438,11 +438,11 @@
             // 
             this.lblSoLuong.AutoSize = true;
             this.lblSoLuong.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSoLuong.Location = new System.Drawing.Point(554, 93);
+            this.lblSoLuong.Location = new System.Drawing.Point(585, 93);
             this.lblSoLuong.Name = "lblSoLuong";
-            this.lblSoLuong.Size = new System.Drawing.Size(63, 22);
+            this.lblSoLuong.Size = new System.Drawing.Size(25, 22);
             this.lblSoLuong.TabIndex = 30;
-            this.lblSoLuong.Text = "Mã SP";
+            this.lblSoLuong.Text = "...";
             // 
             // lblTenSP
             // 
@@ -450,9 +450,9 @@
             this.lblTenSP.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTenSP.Location = new System.Drawing.Point(155, 33);
             this.lblTenSP.Name = "lblTenSP";
-            this.lblTenSP.Size = new System.Drawing.Size(63, 22);
+            this.lblTenSP.Size = new System.Drawing.Size(25, 22);
             this.lblTenSP.TabIndex = 25;
-            this.lblTenSP.Text = "Mã SP";
+            this.lblTenSP.Text = "...";
             // 
             // lblMau
             // 
@@ -460,9 +460,9 @@
             this.lblMau.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMau.Location = new System.Drawing.Point(358, 91);
             this.lblMau.Name = "lblMau";
-            this.lblMau.Size = new System.Drawing.Size(63, 22);
+            this.lblMau.Size = new System.Drawing.Size(25, 22);
             this.lblMau.TabIndex = 29;
-            this.lblMau.Text = "Mã SP";
+            this.lblMau.Text = "...";
             // 
             // lblMaSP
             // 
@@ -470,9 +470,9 @@
             this.lblMaSP.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMaSP.Location = new System.Drawing.Point(155, 64);
             this.lblMaSP.Name = "lblMaSP";
-            this.lblMaSP.Size = new System.Drawing.Size(63, 22);
+            this.lblMaSP.Size = new System.Drawing.Size(25, 22);
             this.lblMaSP.TabIndex = 26;
-            this.lblMaSP.Text = "Mã SP";
+            this.lblMaSP.Text = "...";
             // 
             // lblChatLieu
             // 
@@ -480,9 +480,9 @@
             this.lblChatLieu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblChatLieu.Location = new System.Drawing.Point(358, 62);
             this.lblChatLieu.Name = "lblChatLieu";
-            this.lblChatLieu.Size = new System.Drawing.Size(63, 22);
+            this.lblChatLieu.Size = new System.Drawing.Size(25, 22);
             this.lblChatLieu.TabIndex = 28;
-            this.lblChatLieu.Text = "Mã SP";
+            this.lblChatLieu.Text = "...";
             // 
             // lblLoaiSP
             // 
@@ -490,9 +490,9 @@
             this.lblLoaiSP.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLoaiSP.Location = new System.Drawing.Point(155, 95);
             this.lblLoaiSP.Name = "lblLoaiSP";
-            this.lblLoaiSP.Size = new System.Drawing.Size(63, 22);
+            this.lblLoaiSP.Size = new System.Drawing.Size(25, 22);
             this.lblLoaiSP.TabIndex = 27;
-            this.lblLoaiSP.Text = "Mã SP";
+            this.lblLoaiSP.Text = "...";
             // 
             // label11
             // 
@@ -534,15 +534,15 @@
             this.label8.TabIndex = 22;
             this.label8.Text = "Màu:";
             // 
-            // frm_HangHoa
+            // frm_SanPham
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1132, 753);
+            this.ClientSize = new System.Drawing.Size(1132, 803);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Name = "frm_HangHoa";
-            this.Text = "HangHoa";
+            this.Name = "frm_SanPham";
+            this.Text = "SanPham";
             this.Load += new System.EventHandler(this.frm_HangHoa_Load);
             this.panel1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);

@@ -118,7 +118,7 @@ namespace WDFBanKinhMat
 
         private void btnHangHoa_Click(object sender, EventArgs e)
         {
-            openChildForm(new frm_HangHoa());
+            openChildForm(new frm_SanPham());
         }
     }
 }

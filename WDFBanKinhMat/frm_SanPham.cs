@@ -13,14 +13,19 @@ using WDFBanKinhMat.BLL;
 
 namespace WDFBanKinhMat
 {
-    public partial class frm_HangHoa : Form
+    public partial class frm_SanPham : Form
     {
         Classes.CBBox.CBBox function = new Classes.CBBox.CBBox();
         Classes.DataConnect data = new Classes.DataConnect();
         Decimal GiaBanTu = 0, GiaBanDen = 10000000;
         int MaLoai = 0, MaMau = 0, MaCL = 0, MaDangMat = 0;
         string find;
-        public frm_HangHoa()
+
+        //
+        // TRUYỀN DỮ LIỆU VÀO CÁC COMBOBOX
+        //
+
+        public frm_SanPham()
         {
             InitializeComponent();
             DataTable dtLoaiSP = data.ReadData("select * from LoaiSP");
@@ -36,8 +41,10 @@ namespace WDFBanKinhMat
             function.FillListBox(lstDangMat, dtDangMat, "TenDangmat", "MaDangMat");
         }
 
-        // HIỆN CH
-        
+        //
+        // TRUYỀN DỮ LIỆU CÁC SẢN PHẨM VÀO LISTVIEW    
+        //
+
         private void lvSanPham_Click(object sender, EventArgs e)
         {
             ListViewItem itemselect = lvSanPham.SelectedItems[0];
@@ -53,6 +60,11 @@ namespace WDFBanKinhMat
             lblGiaBan.Text = dt.Rows[0]["DonGiaBan"].ToString();
             lblGiaNhap.Text = dt.Rows[0]["DonGiaNhap"].ToString();
         }
+
+        //
+        // HÀM TÌM THEO DANH SÁCH CHỌN
+        //
+
         private void TimKiemSanPham(Decimal GiaTu, Decimal GiaDen, int MaLoai, int MaMau, int MaCL, int DangMat)
         {
             find = "where DonGiaBan > " + GiaTu.ToString() + " and DonGiaBan < " + GiaDen.ToString();
@@ -75,6 +87,11 @@ namespace WDFBanKinhMat
             }
             DocDuLieu(find);
         }
+
+        //
+        // ĐỌC DỮ LIỆU SAU KHI ĐC TRUYỀN LỆNH FIND
+        //
+
         private void DocDuLieu(string find)
         {
             lvSanPham.Items.Clear();
@@ -90,16 +107,37 @@ namespace WDFBanKinhMat
                 item.ImageIndex = i;
                 lvSanPham.Items.Add(item);
             }
-            Console.WriteLine(lvSanPham.Items.Count);
         }
-        private void frm_HangHoa_Load(object sender, EventArgs e)
-        {
-            DocDuLieu("");
+
+        //
+        // LỌC DỮ LIỆU
+        //
+
+         private void LocLaiDuLieu()
+         {
+            lblChatLieu.Text = lblDangMat.Text = lblGiaBan.Text = lblGiaNhap.Text 
+                = lblLoaiSP.Text = lblMaSP.Text = lblMau.Text = lblSoLuong.Text = lblTenSP.Text = "...";
             lstChatLieu.SelectedIndex = -1;
             lstMau.SelectedIndex = -1;
             lstLoaiSP.SelectedIndex = -1;
             lstDangMat.SelectedIndex = -1;
+            MaCL = MaLoai = MaMau = 0;
+            GiaBanTu = 0;
+            GiaBanDen = 10000000;
+            rdo100300.Checked = false;
+            rdo300500.Checked = false;
+            rdo5001000.Checked = false;
+            DocDuLieu("");
         }
+        private void frm_HangHoa_Load(object sender, EventArgs e)
+        {
+            LocLaiDuLieu();
+        }
+
+        //
+        // CÁC BỘ LỌC
+        //
+
         private void rdo100300_Click(object sender, EventArgs e)
         {
             GiaBanTu = 100000;
@@ -141,16 +179,25 @@ namespace WDFBanKinhMat
             TimKiemSanPham(GiaBanTu, GiaBanDen, MaLoai, MaMau, MaCL, MaDangMat);
         }
 
+        private void btnLocLai_Click(object sender, EventArgs e)
+        {
+            LocLaiDuLieu();
+        }
+
+        //
+        // THÊM SỬA XÓA
+        //
+
         private void menuItemThemSP_Click(object sender, EventArgs e)
         {
             frm_ThemSanPham frmThem = new frm_ThemSanPham();
             frmThem.ShowDialog();
-            
+            DocDuLieu("");
         }
 
         private void menuItemSuaSP_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void menuItemXoaSP_Click(object sender, EventArgs e)
@@ -158,20 +205,5 @@ namespace WDFBanKinhMat
 
         }
 
-
-        private void btnLocLai_Click(object sender, EventArgs e)
-        {
-            lstChatLieu.SelectedIndex = -1;
-            lstMau.SelectedIndex = -1;
-            lstLoaiSP.SelectedIndex = -1;
-            lstDangMat.SelectedIndex = -1;
-            MaCL = MaLoai = MaMau = 0;
-            GiaBanTu = 0;
-            GiaBanDen = 10000000;
-            rdo100300.Checked = false;
-            rdo300500.Checked = false;
-            rdo5001000.Checked = false;
-            DocDuLieu("");   
-        }
     }
 }

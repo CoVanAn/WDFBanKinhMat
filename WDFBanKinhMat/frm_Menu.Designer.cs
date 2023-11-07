@@ -56,7 +56,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 800);
+            this.panel1.Size = new System.Drawing.Size(200, 803);
             this.panel1.TabIndex = 0;
             // 
             // btnDangXuat
@@ -148,14 +148,14 @@
             this.panelHienThi.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelHienThi.Location = new System.Drawing.Point(200, 0);
             this.panelHienThi.Name = "panelHienThi";
-            this.panelHienThi.Size = new System.Drawing.Size(1150, 800);
+            this.panelHienThi.Size = new System.Drawing.Size(1150, 803);
             this.panelHienThi.TabIndex = 1;
             // 
             // Fomr
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1350, 800);
+            this.ClientSize = new System.Drawing.Size(1350, 803);
             this.Controls.Add(this.panelHienThi);
             this.Controls.Add(this.panel1);
             this.Name = "Fomr";

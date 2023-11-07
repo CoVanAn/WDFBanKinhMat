@@ -41,7 +41,7 @@ namespace WDFBanKinhMat.Classes
             cmd.CommandText = str;
             cmd.ExecuteNonQuery();
             CloseData();
-            cmd.Dispose();
+            //cmd.Dispose();
 
         }
 
