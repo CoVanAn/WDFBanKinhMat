@@ -8,7 +8,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using WDFBanKinhMat.BLL;
 
 namespace WDFBanKinhMat
 {
@@ -31,30 +30,15 @@ namespace WDFBanKinhMat
             function.FillListBox(lstMau, dtMauSac, "TenMau", "MaMau");
 
         }
-        private void DisplayData(List<SanPham> lstSanPham)
-        {
-            lvSanPham.Items.Clear();
-            foreach (SanPham SP in lstSanPham)
-            {
-                imageList.Images.Add(Image.FromFile(Environment.CurrentDirectory + "/../../Photos/" + SP.Anh));
-                ListViewItem item = new ListViewItem();
-                item.Name = SP.MaSP.ToString();
-                item.Text = SP.TenSP;
-                item.ImageIndex = i;
-                lvSanPham.Items.Add(item);
-                i++;
-            }
-        }
+
         private void frm_HangHoa_Load(object sender, EventArgs e)
         {
             DataTable dt = data.ReadData("Select * from SanPham");
-            imageList.Images.Add(Image.FromFile(Environment.CurrentDirectory + "/../../Anh/1.jpg"));
             Console.WriteLine(dt.Rows[1].ToString());
             for(int i = 0; i < dt.Rows.Count; i++)
             {
-                j = i+1;
                 imageList.ImageSize = new Size(110, 110);
-                imageList.Images.Add(Image.FromFile(Environment.CurrentDirectory + "/../../Anh/"+j+".jpg"));
+                imageList.Images.Add(Image.FromFile(Environment.CurrentDirectory + "/../../Anh/" + dt.Rows[i]["Anh"].ToString()));
                 ListViewItem item = new ListViewItem();
                 item.Name = dt.Rows[i]["MaSP"].ToString();
                 item.Text = dt.Rows[i]["TenSP"].ToString();
