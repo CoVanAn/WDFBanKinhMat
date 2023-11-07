@@ -25,7 +25,6 @@ namespace WDFBanKinhMat
             panelHienThi.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
-
         }
         public void DisableMenuBar()     ///Bấm vào trong phần giao diện thì thanh Menu tạm thời k bấm đc
         {
@@ -121,9 +120,5 @@ namespace WDFBanKinhMat
         {
             openChildForm(new frm_HangHoa());
         }
-
-        /// <summary>
-        /// GỌI ĐẾN FORM LÀ NHƯ NÀY
-        /// </summary>
     }
 }
