@@ -16,7 +16,7 @@ namespace WDFBanKinhMat
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Fomr());
+            Application.Run(new frm_Menu());
         }
     }
 }

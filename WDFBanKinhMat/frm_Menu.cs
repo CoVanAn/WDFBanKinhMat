@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace WDFBanKinhMat
 {
-    public partial class Fomr : Form
+    public partial class frm_Menu : Form
     {
         private Form activeForm = null;
-        private void openChildForm(Form childForm)
+        public void openChildForm(Form childForm)
         {
             if (activeForm != null)
             activeForm.Close();
@@ -25,7 +25,6 @@ namespace WDFBanKinhMat
             panelHienThi.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
-
         }
         public void DisableMenuBar()     ///Bấm vào trong phần giao diện thì thanh Menu tạm thời k bấm đc
         {
@@ -47,7 +46,7 @@ namespace WDFBanKinhMat
             ///btnBaoCao.Enabled = true;
         }
 
-        public Fomr()
+        public frm_Menu()
         {
             InitializeComponent();
         }
@@ -119,11 +118,12 @@ namespace WDFBanKinhMat
 
         private void btnHangHoa_Click(object sender, EventArgs e)
         {
-            openChildForm(new frm_HangHoa());
+            openChildForm(new frm_SanPham());
         }
 
-        /// <summary>
-        /// GỌI ĐẾN FORM LÀ NHƯ NÀY
-        /// </summary>
+        private void button1_Click(object sender, EventArgs e)
+        {
+            openChildForm(new frm_DanhMuc());
+        }
     }
 }

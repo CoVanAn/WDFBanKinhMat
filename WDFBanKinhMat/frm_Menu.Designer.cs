@@ -1,6 +1,6 @@
 ﻿namespace WDFBanKinhMat
 {
-    partial class Fomr
+    partial class frm_Menu
     {
         /// <summary>
         /// Required designer variable.
@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.btnDangXuat = new System.Windows.Forms.Button();
             this.btnThoat = new System.Windows.Forms.Button();
             this.btnBaoCao = new System.Windows.Forms.Button();
@@ -44,6 +45,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.btnDangXuat);
             this.panel1.Controls.Add(this.btnThoat);
             this.panel1.Controls.Add(this.btnBaoCao);
@@ -56,8 +58,18 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 700);
+            this.panel1.Size = new System.Drawing.Size(200, 803);
             this.panel1.TabIndex = 0;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(20, 244);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(161, 46);
+            this.button1.TabIndex = 13;
+            this.button1.Text = "Danh mục";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnDangXuat
             // 
@@ -124,7 +136,7 @@
             // 
             // btnHangHoa
             // 
-            this.btnHangHoa.Location = new System.Drawing.Point(20, 244);
+            this.btnHangHoa.Location = new System.Drawing.Point(20, 192);
             this.btnHangHoa.Name = "btnHangHoa";
             this.btnHangHoa.Size = new System.Drawing.Size(161, 46);
             this.btnHangHoa.TabIndex = 10;
@@ -148,17 +160,17 @@
             this.panelHienThi.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelHienThi.Location = new System.Drawing.Point(200, 0);
             this.panelHienThi.Name = "panelHienThi";
-            this.panelHienThi.Size = new System.Drawing.Size(1050, 700);
+            this.panelHienThi.Size = new System.Drawing.Size(1150, 803);
             this.panelHienThi.TabIndex = 1;
             // 
-            // Fomr
+            // frm_Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1250, 700);
+            this.ClientSize = new System.Drawing.Size(1350, 803);
             this.Controls.Add(this.panelHienThi);
             this.Controls.Add(this.panel1);
-            this.Name = "Fomr";
+            this.Name = "frm_Menu";
             this.Text = "BanKinhMat";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
@@ -179,6 +191,7 @@
         private System.Windows.Forms.Button btnHangHoa;
         private System.Windows.Forms.GroupBox grpLogo;
         private System.Windows.Forms.Panel panelHienThi;
+        private System.Windows.Forms.Button button1;
     }
 }
 
