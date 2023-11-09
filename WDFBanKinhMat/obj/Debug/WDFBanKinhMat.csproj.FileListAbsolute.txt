@@ -13,7 +13,6 @@ C:\Users\covan\OneDrive\Document\Ki1-Nam3\laptinhtucquan\WDFBanKinhMat\WDFBanKin
 C:\Users\covan\OneDrive\Document\Ki1-Nam3\laptinhtucquan\WDFBanKinhMat\WDFBanKinhMat\bin\Debug\WDFBanKinhMat.exe
 C:\Users\covan\OneDrive\Document\Ki1-Nam3\laptinhtucquan\WDFBanKinhMat\WDFBanKinhMat\bin\Debug\WDFBanKinhMat.pdb
 C:\Users\covan\OneDrive\Document\Ki1-Nam3\laptinhtucquan\WDFBanKinhMat\WDFBanKinhMat\obj\Debug\WDFBanKinhMat.csproj.AssemblyReference.cache
-C:\Users\covan\OneDrive\Document\Ki1-Nam3\laptinhtucquan\WDFBanKinhMat\WDFBanKinhMat\obj\Debug\WDFBanKinhMat.Fomr.resources
 C:\Users\covan\OneDrive\Document\Ki1-Nam3\laptinhtucquan\WDFBanKinhMat\WDFBanKinhMat\obj\Debug\WDFBanKinhMat.Properties.Resources.resources
 C:\Users\covan\OneDrive\Document\Ki1-Nam3\laptinhtucquan\WDFBanKinhMat\WDFBanKinhMat\obj\Debug\WDFBanKinhMat.csproj.GenerateResource.cache
 C:\Users\covan\OneDrive\Document\Ki1-Nam3\laptinhtucquan\WDFBanKinhMat\WDFBanKinhMat\obj\Debug\WDFBanKinhMat.csproj.CoreCompileInputs.cache
@@ -22,3 +21,5 @@ C:\Users\covan\OneDrive\Document\Ki1-Nam3\laptinhtucquan\WDFBanKinhMat\WDFBanKin
 C:\Users\covan\OneDrive\Document\Ki1-Nam3\laptinhtucquan\WDFBanKinhMat\WDFBanKinhMat\obj\Debug\WDFBanKinhMat.frm_ThemSanPham.resources
 C:\Users\covan\OneDrive\Document\Ki1-Nam3\laptinhtucquan\WDFBanKinhMat\WDFBanKinhMat\obj\Debug\WDFBanKinhMat.frm_SanPham.resources
 C:\Users\covan\OneDrive\Document\Ki1-Nam3\laptinhtucquan\WDFBanKinhMat\WDFBanKinhMat\obj\Debug\WDFBanKinhMat.frm_SuaSanPham.resources
+C:\Users\covan\OneDrive\Document\Ki1-Nam3\laptinhtucquan\WDFBanKinhMat\WDFBanKinhMat\obj\Debug\WDFBanKinhMat.frm_DanhMuc.resources
+C:\Users\covan\OneDrive\Document\Ki1-Nam3\laptinhtucquan\WDFBanKinhMat\WDFBanKinhMat\obj\Debug\WDFBanKinhMat.frm_Menu.resources

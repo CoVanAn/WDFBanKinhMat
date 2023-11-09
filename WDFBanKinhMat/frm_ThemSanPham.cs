@@ -16,12 +16,9 @@ namespace WDFBanKinhMat
     {
         Classes.DataConnect data = new Classes.DataConnect();
         Classes.CBBox.CBBox function = new Classes.CBBox.CBBox();
-        int NMaSP;
-        string query = "select top 1 MaSP from SanPham order by MaSP desc";
 
         String FileName = "", Extension = "", NamePic = "";
-
-
+        
         public static int SoLuong = 0;
         public static Decimal DonGiaNhap = 0;
         public static String TenSP = "";
@@ -54,9 +51,7 @@ namespace WDFBanKinhMat
 
         private void frm_ThemSanPham_Load(object sender, EventArgs e)
         {
-            DataTable dtSP = data.ReadData(query);
-            NMaSP = int.Parse(dtSP.Rows[0][0].ToString()) + 1;
-            txtMaSP.Text = NMaSP.ToString();
+            txtMaSP.Text = frm_SanPham.MaSP.ToString();
             txtMaSP.Enabled = false;
         }
 
@@ -75,7 +70,7 @@ namespace WDFBanKinhMat
                 FileName = dlgOpen.FileName;
                 picAnh.Image = Image.FromFile(dlgOpen.FileName);
                 Extension = Path.GetExtension(dlgOpen.FileName);
-                NamePic = NMaSP.ToString() + Extension;
+                NamePic = frm_SanPham.MaSP.ToString() + Extension;
             }
         }
 
@@ -122,8 +117,10 @@ namespace WDFBanKinhMat
 
                 data.ChangeData(strSql);
                 File.Copy(FileName, Environment.CurrentDirectory + "/../../Anh/" + NamePic);
-                MessageBox.Show("Thêm thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                
+                //Image.FromFile(Environment.CurrentDirectory + "/../../Anh/" + NamePic).Dispose();
+                MessageBox.Show("Thêm thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);          
+                picAnh.Refresh();
+                flag = 1;
                 this.Close();
             }
             catch (Exception ex)

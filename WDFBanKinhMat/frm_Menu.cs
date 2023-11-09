@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace WDFBanKinhMat
 {
-    public partial class Fomr : Form
+    public partial class frm_Menu : Form
     {
         private Form activeForm = null;
-        private void openChildForm(Form childForm)
+        public void openChildForm(Form childForm)
         {
             if (activeForm != null)
             activeForm.Close();
@@ -46,7 +46,7 @@ namespace WDFBanKinhMat
             ///btnBaoCao.Enabled = true;
         }
 
-        public Fomr()
+        public frm_Menu()
         {
             InitializeComponent();
         }
@@ -119,6 +119,11 @@ namespace WDFBanKinhMat
         private void btnHangHoa_Click(object sender, EventArgs e)
         {
             openChildForm(new frm_SanPham());
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            openChildForm(new frm_DanhMuc());
         }
     }
 }

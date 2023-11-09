@@ -124,7 +124,7 @@
             // btnLocLai
             // 
             this.btnLocLai.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLocLai.Location = new System.Drawing.Point(34, 710);
+            this.btnLocLai.Location = new System.Drawing.Point(34, 735);
             this.btnLocLai.Name = "btnLocLai";
             this.btnLocLai.Size = new System.Drawing.Size(95, 31);
             this.btnLocLai.TabIndex = 8;

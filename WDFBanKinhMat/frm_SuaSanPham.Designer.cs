@@ -28,12 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.txtDonGiaBan = new System.Windows.Forms.TextBox();
             this.txtDonGiaNhap = new System.Windows.Forms.TextBox();
             this.nmrSoLuong = new System.Windows.Forms.NumericUpDown();
             this.cboMau = new System.Windows.Forms.ComboBox();
             this.cboChatieu = new System.Windows.Forms.ComboBox();
-            this.cboTheLoai = new System.Windows.Forms.ComboBox();
+            this.cboLoaiSP = new System.Windows.Forms.ComboBox();
             this.txtTenSP = new System.Windows.Forms.TextBox();
             this.btnDong = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
@@ -46,8 +47,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lblMesseage = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cboHinhDangMat = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.tmr = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.nmrSoLuong)).BeginInit();
             this.SuspendLayout();
             // 
@@ -96,14 +98,14 @@
             this.cboChatieu.Size = new System.Drawing.Size(244, 30);
             this.cboChatieu.TabIndex = 32;
             // 
-            // cboTheLoai
+            // cboLoaiSP
             // 
-            this.cboTheLoai.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboTheLoai.FormattingEnabled = true;
-            this.cboTheLoai.Location = new System.Drawing.Point(162, 151);
-            this.cboTheLoai.Name = "cboTheLoai";
-            this.cboTheLoai.Size = new System.Drawing.Size(244, 30);
-            this.cboTheLoai.TabIndex = 31;
+            this.cboLoaiSP.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboLoaiSP.FormattingEnabled = true;
+            this.cboLoaiSP.Location = new System.Drawing.Point(162, 151);
+            this.cboLoaiSP.Name = "cboLoaiSP";
+            this.cboLoaiSP.Size = new System.Drawing.Size(244, 30);
+            this.cboLoaiSP.TabIndex = 31;
             // 
             // txtTenSP
             // 
@@ -117,23 +119,25 @@
             // 
             this.btnDong.BackColor = System.Drawing.Color.DarkGray;
             this.btnDong.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDong.Location = new System.Drawing.Point(238, 488);
+            this.btnDong.Location = new System.Drawing.Point(264, 499);
             this.btnDong.Name = "btnDong";
             this.btnDong.Size = new System.Drawing.Size(97, 39);
             this.btnDong.TabIndex = 29;
             this.btnDong.Text = "Đóng";
             this.btnDong.UseVisualStyleBackColor = false;
+            this.btnDong.Click += new System.EventHandler(this.btnDong_Click);
             // 
             // btnSua
             // 
             this.btnSua.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnSua.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSua.Location = new System.Drawing.Point(122, 488);
+            this.btnSua.Location = new System.Drawing.Point(81, 499);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(101, 39);
             this.btnSua.TabIndex = 28;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = false;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // label9
             // 
@@ -209,7 +213,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(51, 56);
+            this.label2.Location = new System.Drawing.Point(1, 59);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(360, 20);
             this.label2.TabIndex = 20;
@@ -218,22 +222,22 @@
             // lblMesseage
             // 
             this.lblMesseage.AutoSize = true;
-            this.lblMesseage.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMesseage.ForeColor = System.Drawing.Color.Blue;
+            this.lblMesseage.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMesseage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.lblMesseage.Location = new System.Drawing.Point(26, 37);
             this.lblMesseage.Name = "lblMesseage";
-            this.lblMesseage.Size = new System.Drawing.Size(134, 20);
+            this.lblMesseage.Size = new System.Drawing.Size(135, 22);
             this.lblMesseage.TabIndex = 19;
             this.lblMesseage.Text = "                         ";
             // 
-            // comboBox1
+            // cboHinhDangMat
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(162, 241);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(244, 30);
-            this.comboBox1.TabIndex = 38;
+            this.cboHinhDangMat.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboHinhDangMat.FormattingEnabled = true;
+            this.cboHinhDangMat.Location = new System.Drawing.Point(162, 241);
+            this.cboHinhDangMat.Name = "cboHinhDangMat";
+            this.cboHinhDangMat.Size = new System.Drawing.Size(244, 30);
+            this.cboHinhDangMat.TabIndex = 38;
             // 
             // label3
             // 
@@ -245,20 +249,24 @@
             this.label3.TabIndex = 37;
             this.label3.Text = "Hình dạng mắt:";
             // 
+            // tmr
+            // 
+            this.tmr.Tick += new System.EventHandler(this.tmr_Tick);
+            // 
             // frm_SuaSanPham
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(432, 589);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cboHinhDangMat);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtDonGiaBan);
             this.Controls.Add(this.txtDonGiaNhap);
             this.Controls.Add(this.nmrSoLuong);
             this.Controls.Add(this.cboMau);
             this.Controls.Add(this.cboChatieu);
-            this.Controls.Add(this.cboTheLoai);
+            this.Controls.Add(this.cboLoaiSP);
             this.Controls.Add(this.txtTenSP);
             this.Controls.Add(this.btnDong);
             this.Controls.Add(this.btnSua);
@@ -273,6 +281,7 @@
             this.Controls.Add(this.lblMesseage);
             this.Name = "frm_SuaSanPham";
             this.Text = "frm_SuaSanPham";
+            this.Load += new System.EventHandler(this.frm_SuaSanPham_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nmrSoLuong)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -286,7 +295,7 @@
         private System.Windows.Forms.NumericUpDown nmrSoLuong;
         private System.Windows.Forms.ComboBox cboMau;
         private System.Windows.Forms.ComboBox cboChatieu;
-        private System.Windows.Forms.ComboBox cboTheLoai;
+        private System.Windows.Forms.ComboBox cboLoaiSP;
         private System.Windows.Forms.TextBox txtTenSP;
         private System.Windows.Forms.Button btnDong;
         private System.Windows.Forms.Button btnSua;
@@ -299,7 +308,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblMesseage;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cboHinhDangMat;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Timer tmr;
     }
 }
