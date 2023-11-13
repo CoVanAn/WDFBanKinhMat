@@ -19,7 +19,6 @@ namespace WDFBanKinhMat
         Classes.DataConnect data = new Classes.DataConnect();
         Decimal GiaBanTu = 0, GiaBanDen = 10000000;
         int MaLoai = 0, MaMau = 0, MaCL = 0, MaDangMat = 0;
-        frm_Menu Menu;
 
         public static int MaSP;
         string find;
@@ -185,6 +184,12 @@ namespace WDFBanKinhMat
             MaMau = int.Parse(lstMau.SelectedValue.ToString());
             TimKiemSanPham(GiaBanTu, GiaBanDen, MaLoai, MaMau, MaCL, MaDangMat);
         }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
         private void lstDangMat_Click(object sender, EventArgs e)
         {
             MaDangMat = int.Parse(lstDangMat.SelectedValue.ToString());
