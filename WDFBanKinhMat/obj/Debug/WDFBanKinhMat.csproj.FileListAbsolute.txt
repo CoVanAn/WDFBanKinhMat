@@ -23,3 +23,7 @@ C:\Users\covan\OneDrive\Document\Ki1-Nam3\laptinhtucquan\WDFBanKinhMat\WDFBanKin
 C:\Users\covan\OneDrive\Document\Ki1-Nam3\laptinhtucquan\WDFBanKinhMat\WDFBanKinhMat\obj\Debug\WDFBanKinhMat.frm_SuaSanPham.resources
 C:\Users\covan\OneDrive\Document\Ki1-Nam3\laptinhtucquan\WDFBanKinhMat\WDFBanKinhMat\obj\Debug\WDFBanKinhMat.frm_DanhMuc.resources
 C:\Users\covan\OneDrive\Document\Ki1-Nam3\laptinhtucquan\WDFBanKinhMat\WDFBanKinhMat\obj\Debug\WDFBanKinhMat.frm_Menu.resources
+C:\Users\covan\OneDrive\Document\Ki1-Nam3\laptinhtucquan\WDFBanKinhMat\WDFBanKinhMat\obj\Debug\WDFBanKinhMat.frm_BaoCaoDoanhThu.resources
+C:\Users\covan\OneDrive\Document\Ki1-Nam3\laptinhtucquan\WDFBanKinhMat\WDFBanKinhMat\obj\Debug\WDFBanKinhMat.frm_BaoCaoChiPhi.resources
+C:\Users\covan\OneDrive\Document\Ki1-Nam3\laptinhtucquan\WDFBanKinhMat\WDFBanKinhMat\obj\Debug\WDFBanKinhMat.frm_BaoCaoDoanhSo.resources
+C:\Users\covan\OneDrive\Document\Ki1-Nam3\laptinhtucquan\WDFBanKinhMat\WDFBanKinhMat\obj\Debug\WDFBanKinhMat.frm_MenuBaoCao.resources

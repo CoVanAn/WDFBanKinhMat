@@ -33,8 +33,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1001\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Office, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Excel.14.0.4760.1000\lib\net20\Office.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,8 +55,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\CBBox\BaoCao.cs" />
     <Compile Include="Classes\CBBox\CBBox.cs" />
     <Compile Include="Classes\DataConnect.cs" />
+    <Compile Include="frm_BaoCaoChiPhi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_BaoCaoChiPhi.Designer.cs">
+      <DependentUpon>frm_BaoCaoChiPhi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_BaoCaoDoanhSo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_BaoCaoDoanhSo.Designer.cs">
+      <DependentUpon>frm_BaoCaoDoanhSo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_BaoCaoDoanhThu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_BaoCaoDoanhThu.Designer.cs">
+      <DependentUpon>frm_BaoCaoDoanhThu.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_DanhMuc.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -59,6 +87,12 @@
     </Compile>
     <Compile Include="frm_Menu.Designer.cs">
       <DependentUpon>frm_Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_MenuBaoCao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_MenuBaoCao.Designer.cs">
+      <DependentUpon>frm_MenuBaoCao.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_SanPham.cs">
       <SubType>Form</SubType>
@@ -80,11 +114,23 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frm_BaoCaoChiPhi.resx">
+      <DependentUpon>frm_BaoCaoChiPhi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_BaoCaoDoanhSo.resx">
+      <DependentUpon>frm_BaoCaoDoanhSo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_BaoCaoDoanhThu.resx">
+      <DependentUpon>frm_BaoCaoDoanhThu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_DanhMuc.resx">
       <DependentUpon>frm_DanhMuc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_Menu.resx">
       <DependentUpon>frm_Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_MenuBaoCao.resx">
+      <DependentUpon>frm_MenuBaoCao.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_SanPham.resx">
       <DependentUpon>frm_SanPham.cs</DependentUpon>
@@ -105,6 +151,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <None Include=".editorconfig" />
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

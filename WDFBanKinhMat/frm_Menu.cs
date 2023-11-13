@@ -7,12 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace WDFBanKinhMat
 {
     public partial class frm_Menu : Form
     {
         private Form activeForm = null;
+
         public void openChildForm(Form childForm)
         {
             if (activeForm != null)
@@ -124,6 +126,14 @@ namespace WDFBanKinhMat
         private void button1_Click(object sender, EventArgs e)
         {
             openChildForm(new frm_DanhMuc());
+        }
+
+        private void btnBaoCao_Click(object sender, EventArgs e)
+        {
+
+          //openChildForm(new frm_BaoCaoDoanhThu());
+           openChildForm(new frm_MenuBaoCao());
+
         }
     }
 }

@@ -44,7 +44,15 @@ namespace WDFBanKinhMat.Classes
             //cmd.Dispose();
 
         }
-
+        public object ExcuteScalar(string sql)
+        {
+            Object result;
+            OpenData();
+            SqlCommand cmd = new SqlCommand(sql, sqlCon);
+            result = cmd.ExecuteScalar();
+            CloseData();
+            return result;
+        }
         private void CloseData()
         {
             if (sqlCon.State != System.Data.ConnectionState.Closed)
