@@ -35,7 +35,6 @@ namespace WDFBanKinhMat
             btnHoaDonNhap.Enabled = false;
             btnKhachHang.Enabled = false;
             btnNhanVien.Enabled = false;
-            ///btnBaoCao.Enabled = false;
         }
 
         public void EnableMenuBar()     ///Bấm 
@@ -45,7 +44,6 @@ namespace WDFBanKinhMat
             btnHoaDonNhap.Enabled = true;
             btnKhachHang.Enabled = true;
             btnNhanVien.Enabled = true;
-            ///btnBaoCao.Enabled = true;
         }
 
         public frm_Menu()
@@ -130,10 +128,17 @@ namespace WDFBanKinhMat
 
         private void btnBaoCao_Click(object sender, EventArgs e)
         {
-
-          //openChildForm(new frm_BaoCaoDoanhThu());
            openChildForm(new frm_MenuBaoCao());
 
+        }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            
+            if(MessageBox.Show("Bạn có muốn thoát chương trình!?", "Thông báo!!!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Close();
+            }
         }
     }
 }
