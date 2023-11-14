@@ -108,7 +108,7 @@ namespace WDFBanKinhMat
         {
            
         }
-
+        
         private void frm_BaoCao_Load(object sender, EventArgs e)
         {
             String query = "select * from (select year(NgayBan) as Nam,month(NgayBan) as Thang,SoLuong*DonGia-(SoLuong*DonGia*GiamGia/100) as ThanhTien " +

@@ -14,6 +14,7 @@ namespace WDFBanKinhMat
 {
     public partial class frm_BaoCaoDoanhSo : Form
     {
+        string Desc = "SoLuong";
         DataConnect db = new DataConnect();
         public frm_BaoCaoDoanhSo()
         {
@@ -22,7 +23,10 @@ namespace WDFBanKinhMat
 
         private void btnXem_Click(object sender, EventArgs e)
         {
-            String queryKH = "select KhachHang.MaKH,KhachHang.TenKH,Sum(TongTien) as DoanhThu from KhachHang inner join HoaDonBan on KhachHang.MaKH=HoaDonBan.MaKH where NgayBan>='" + dtpTu.Value + "'and NgayBan<='" + dtpDen.Value + "' group by KhachHang.MaKH,KhachHang.TenKH";
+            String queryKH = "select KhachHang.MaKH,KhachHang.TenKH,Sum(TongTien) as DoanhThu " +
+                "from KhachHang inner join HoaDonBan on KhachHang.MaKH=HoaDonBan.MaKH where NgayBan>='" + dtpTu.Value + "'and NgayBan<='" + dtpDen.Value +
+                "' group by KhachHang.MaKH,KhachHang.TenKH " +
+                "order by DoanhThu Desc";
             DataTable tbl = db.ReadData(queryKH);
             Decimal TongKH = 0;
             dgvKhachHang.Rows.Clear();
@@ -39,21 +43,18 @@ namespace WDFBanKinhMat
             }
             txtTongKH.Text = TongKH.ToString("#,###0");
         }
-
-        private void frm_BaoCaoDoanhSo_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnXemSP_Click(object sender, EventArgs e)
+       
+        private void HienThi()
         {
             Decimal TongDTSP = 0;
             int TongSL = 0;
             dgvSanPham.Rows.Clear();
+            String quemua = "select MaSP, SUM(SoLuong) from ChiTietHDB GROUP BY MaSP ";
             String query = "select SanPham.MaSP,SanPham.TenSP,SanPham.MaLoai,Sum(ChiTietHDB.SoLuong) as SoLuong," +
                 "Sum(ChiTietHDB.SoLuong*ChiTietHDB.DonGia-(ChiTietHDB.SoLuong*ChiTietHDB.DonGia*ChiTietHDB.GiamGia)/100) as ThanhTien " +
                 "from SanPham inner join ChiTietHDB on SanPham.MaSP=ChiTietHDB.MaSP inner join HoaDonBan on ChiTietHDB.SoHDB =HoaDonBan.SoHDB " +
-                "where NgayBan>='" + dtpTuSP.Value + "' and NgayBan<='" + dtpDenSP.Value + "' group by SanPham.MaSP,SanPham.TenSP,SanPham.MaLoai";
+                "where NgayBan>='" + dtpTuSP.Value + "' and NgayBan<='" + dtpDenSP.Value + "' group by SanPham.MaSP,SanPham.TenSP,SanPham.MaLoai " +
+                "order by " + Desc + " Desc";
             DataTable tbl = db.ReadData(query);
 
             for (int i = 0; i < tbl.Rows.Count; i++)
@@ -76,6 +77,15 @@ namespace WDFBanKinhMat
             }
             txtTongTienSP.Text = TongDTSP.ToString("#,###0");
             txtTongSoLuong.Text = TongSL.ToString();
+        }
+        private void frm_BaoCaoDoanhSo_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnXemSP_Click(object sender, EventArgs e)
+        {
+            HienThi();
         }
 
         private void btnXuat_Click(object sender, EventArgs e)
@@ -218,6 +228,24 @@ namespace WDFBanKinhMat
             exSheet.Range["E" + (i + 12).ToString() + ":F" + (i + 12).ToString()].HorizontalAlignment = COMExcel.XlHAlign.xlHAlignCenter;
             exSheet.Range["E" + (i + 12).ToString() + ":F" + (i + 12).ToString()].Value = "(Ký,họ tên)";
             exApp.Visible = true;
+        }
+
+        private void btnSLB_Click(object sender, EventArgs e)
+        {
+            Desc = "SoLuong";
+            HienThi();
+        }
+
+        private void btnDT_Click(object sender, EventArgs e)
+        {
+            Desc = "ThanhTien";
+            HienThi();
+
+        }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

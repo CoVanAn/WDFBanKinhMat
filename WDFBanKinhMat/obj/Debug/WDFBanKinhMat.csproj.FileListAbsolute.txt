@@ -27,3 +27,6 @@ C:\Users\covan\OneDrive\Document\Ki1-Nam3\laptinhtucquan\WDFBanKinhMat\WDFBanKin
 C:\Users\covan\OneDrive\Document\Ki1-Nam3\laptinhtucquan\WDFBanKinhMat\WDFBanKinhMat\obj\Debug\WDFBanKinhMat.frm_BaoCaoChiPhi.resources
 C:\Users\covan\OneDrive\Document\Ki1-Nam3\laptinhtucquan\WDFBanKinhMat\WDFBanKinhMat\obj\Debug\WDFBanKinhMat.frm_BaoCaoDoanhSo.resources
 C:\Users\covan\OneDrive\Document\Ki1-Nam3\laptinhtucquan\WDFBanKinhMat\WDFBanKinhMat\obj\Debug\WDFBanKinhMat.frm_MenuBaoCao.resources
+C:\Users\covan\OneDrive\Document\Ki1-Nam3\laptinhtucquan\WDFBanKinhMat\WDFBanKinhMat\bin\Debug\Guna.UI2.dll
+C:\Users\covan\OneDrive\Document\Ki1-Nam3\laptinhtucquan\WDFBanKinhMat\WDFBanKinhMat\obj\Debug\WDFBanKinhMat.csproj.CopyComplete
+C:\Users\covan\OneDrive\Document\Ki1-Nam3\laptinhtucquan\WDFBanKinhMat\WDFBanKinhMat\obj\Debug\WDFBanKinhMat.Classes.frm_BaoCaoSanPham.resources

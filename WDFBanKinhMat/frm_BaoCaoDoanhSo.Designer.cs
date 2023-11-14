@@ -28,14 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.txtTongSoLuong = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.txtTongTienSP = new System.Windows.Forms.TextBox();
             this.btnXuatSP = new System.Windows.Forms.Button();
-            this.btnXemSP = new System.Windows.Forms.Button();
             this.dtpDenSP = new System.Windows.Forms.DateTimePicker();
             this.label8 = new System.Windows.Forms.Label();
             this.dtpTuSP = new System.Windows.Forms.DateTimePicker();
@@ -47,6 +46,11 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.dgvSanPham = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colSoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colDoanhThu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label6 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -60,11 +64,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colSoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colDoanhThu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnDT = new System.Windows.Forms.Button();
+            this.btnSLB = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSanPham)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -75,16 +76,16 @@
             // 
             // txtTongSoLuong
             // 
-            this.txtTongSoLuong.Location = new System.Drawing.Point(501, 29);
+            this.txtTongSoLuong.Location = new System.Drawing.Point(430, 30);
             this.txtTongSoLuong.Name = "txtTongSoLuong";
-            this.txtTongSoLuong.Size = new System.Drawing.Size(171, 28);
+            this.txtTongSoLuong.Size = new System.Drawing.Size(159, 28);
             this.txtTongSoLuong.TabIndex = 66;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(375, 70);
+            this.label9.Location = new System.Drawing.Point(313, 70);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(128, 20);
             this.label9.TabIndex = 64;
@@ -92,16 +93,16 @@
             // 
             // txtTongTienSP
             // 
-            this.txtTongTienSP.Location = new System.Drawing.Point(501, 66);
+            this.txtTongTienSP.Location = new System.Drawing.Point(430, 66);
             this.txtTongTienSP.Name = "txtTongTienSP";
-            this.txtTongTienSP.Size = new System.Drawing.Size(171, 28);
+            this.txtTongTienSP.Size = new System.Drawing.Size(159, 28);
             this.txtTongTienSP.TabIndex = 63;
             // 
             // btnXuatSP
             // 
             this.btnXuatSP.BackColor = System.Drawing.Color.Gray;
             this.btnXuatSP.ForeColor = System.Drawing.Color.White;
-            this.btnXuatSP.Location = new System.Drawing.Point(720, 66);
+            this.btnXuatSP.Location = new System.Drawing.Point(746, 65);
             this.btnXuatSP.Name = "btnXuatSP";
             this.btnXuatSP.Size = new System.Drawing.Size(69, 31);
             this.btnXuatSP.TabIndex = 62;
@@ -109,31 +110,19 @@
             this.btnXuatSP.UseVisualStyleBackColor = false;
             this.btnXuatSP.Click += new System.EventHandler(this.btnXuatSP_Click);
             // 
-            // btnXemSP
-            // 
-            this.btnXemSP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.btnXemSP.ForeColor = System.Drawing.Color.White;
-            this.btnXemSP.Location = new System.Drawing.Point(720, 29);
-            this.btnXemSP.Name = "btnXemSP";
-            this.btnXemSP.Size = new System.Drawing.Size(69, 31);
-            this.btnXemSP.TabIndex = 61;
-            this.btnXemSP.Text = "Xem";
-            this.btnXemSP.UseVisualStyleBackColor = false;
-            this.btnXemSP.Click += new System.EventHandler(this.btnXemSP_Click);
-            // 
             // dtpDenSP
             // 
             this.dtpDenSP.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpDenSP.Location = new System.Drawing.Point(244, 68);
+            this.dtpDenSP.Location = new System.Drawing.Point(209, 66);
             this.dtpDenSP.Name = "dtpDenSP";
-            this.dtpDenSP.Size = new System.Drawing.Size(108, 28);
+            this.dtpDenSP.Size = new System.Drawing.Size(96, 28);
             this.dtpDenSP.TabIndex = 60;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(205, 74);
+            this.label8.Location = new System.Drawing.Point(170, 66);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(43, 20);
             this.label8.TabIndex = 59;
@@ -142,16 +131,16 @@
             // dtpTuSP
             // 
             this.dtpTuSP.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpTuSP.Location = new System.Drawing.Point(244, 31);
+            this.dtpTuSP.Location = new System.Drawing.Point(209, 29);
             this.dtpTuSP.Name = "dtpTuSP";
-            this.dtpTuSP.Size = new System.Drawing.Size(108, 28);
+            this.dtpTuSP.Size = new System.Drawing.Size(96, 28);
             this.dtpTuSP.TabIndex = 58;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(205, 37);
+            this.label7.Location = new System.Drawing.Point(170, 29);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(35, 20);
             this.label7.TabIndex = 57;
@@ -175,8 +164,8 @@
             // 
             // colTongDanhSo
             // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.colTongDanhSo.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.colTongDanhSo.DefaultCellStyle = dataGridViewCellStyle10;
             this.colTongDanhSo.HeaderText = "Tổng doanh số";
             this.colTongDanhSo.MinimumWidth = 6;
             this.colTongDanhSo.Name = "colTongDanhSo";
@@ -207,7 +196,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(377, 34);
+            this.label10.Location = new System.Drawing.Point(315, 34);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(118, 20);
             this.label10.TabIndex = 65;
@@ -235,11 +224,55 @@
             this.dgvSanPham.Size = new System.Drawing.Size(1134, 333);
             this.dgvSanPham.TabIndex = 56;
             // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.HeaderText = "Mã SP";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.HeaderText = "Tên sản phẩm";
+            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.Width = 300;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.HeaderText = "Nhóm sản phẩm";
+            this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            this.dataGridViewTextBoxColumn3.Width = 150;
+            // 
+            // colSoLuong
+            // 
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.colSoLuong.DefaultCellStyle = dataGridViewCellStyle11;
+            this.colSoLuong.HeaderText = "Số lượng bán";
+            this.colSoLuong.MinimumWidth = 6;
+            this.colSoLuong.Name = "colSoLuong";
+            this.colSoLuong.ReadOnly = true;
+            this.colSoLuong.Width = 125;
+            // 
+            // colDoanhThu
+            // 
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.colDoanhThu.DefaultCellStyle = dataGridViewCellStyle12;
+            this.colDoanhThu.HeaderText = "Doanh thu";
+            this.colDoanhThu.MinimumWidth = 6;
+            this.colDoanhThu.Name = "colDoanhThu";
+            this.colDoanhThu.ReadOnly = true;
+            this.colDoanhThu.Width = 125;
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(378, 16);
+            this.label6.Location = new System.Drawing.Point(349, 15);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(128, 20);
             this.label6.TabIndex = 55;
@@ -251,7 +284,7 @@
             this.panel2.Controls.Add(this.label4);
             this.panel2.Location = new System.Drawing.Point(41, 33);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(151, 59);
+            this.panel2.Size = new System.Drawing.Size(120, 59);
             this.panel2.TabIndex = 53;
             // 
             // panel1
@@ -260,12 +293,12 @@
             this.panel1.Controls.Add(this.label3);
             this.panel1.Location = new System.Drawing.Point(41, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(161, 50);
+            this.panel1.Size = new System.Drawing.Size(134, 50);
             this.panel1.TabIndex = 52;
             // 
             // txtTongKH
             // 
-            this.txtTongKH.Location = new System.Drawing.Point(501, 16);
+            this.txtTongKH.Location = new System.Drawing.Point(465, 12);
             this.txtTongKH.Name = "txtTongKH";
             this.txtTongKH.Size = new System.Drawing.Size(171, 28);
             this.txtTongKH.TabIndex = 54;
@@ -274,7 +307,7 @@
             // 
             this.btnXuat.BackColor = System.Drawing.Color.Gray;
             this.btnXuat.ForeColor = System.Drawing.Color.White;
-            this.btnXuat.Location = new System.Drawing.Point(720, 48);
+            this.btnXuat.Location = new System.Drawing.Point(646, 47);
             this.btnXuat.Name = "btnXuat";
             this.btnXuat.Size = new System.Drawing.Size(69, 31);
             this.btnXuat.TabIndex = 50;
@@ -306,7 +339,7 @@
             // 
             this.btnXem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.btnXem.ForeColor = System.Drawing.Color.White;
-            this.btnXem.Location = new System.Drawing.Point(720, 13);
+            this.btnXem.Location = new System.Drawing.Point(646, 11);
             this.btnXem.Name = "btnXem";
             this.btnXem.Size = new System.Drawing.Size(69, 31);
             this.btnXem.TabIndex = 49;
@@ -317,7 +350,7 @@
             // dtpDen
             // 
             this.dtpDen.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpDen.Location = new System.Drawing.Point(259, 44);
+            this.dtpDen.Location = new System.Drawing.Point(234, 47);
             this.dtpDen.Name = "dtpDen";
             this.dtpDen.Size = new System.Drawing.Size(108, 28);
             this.dtpDen.TabIndex = 48;
@@ -325,7 +358,7 @@
             // dtpTu
             // 
             this.dtpTu.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpTu.Location = new System.Drawing.Point(259, 10);
+            this.dtpTu.Location = new System.Drawing.Point(234, 13);
             this.dtpTu.Name = "dtpTu";
             this.dtpTu.Size = new System.Drawing.Size(108, 28);
             this.dtpTu.TabIndex = 46;
@@ -334,7 +367,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(211, 50);
+            this.label2.Location = new System.Drawing.Point(196, 53);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(43, 20);
             this.label2.TabIndex = 47;
@@ -344,7 +377,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(208, 16);
+            this.label1.Location = new System.Drawing.Point(193, 19);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(35, 20);
             this.label1.TabIndex = 45;
@@ -370,6 +403,8 @@
             // 
             // panel4
             // 
+            this.panel4.Controls.Add(this.btnDT);
+            this.panel4.Controls.Add(this.btnSLB);
             this.panel4.Controls.Add(this.txtTongSoLuong);
             this.panel4.Controls.Add(this.panel2);
             this.panel4.Controls.Add(this.dgvSanPham);
@@ -379,7 +414,6 @@
             this.panel4.Controls.Add(this.label7);
             this.panel4.Controls.Add(this.btnXuatSP);
             this.panel4.Controls.Add(this.dtpTuSP);
-            this.panel4.Controls.Add(this.btnXemSP);
             this.panel4.Controls.Add(this.label8);
             this.panel4.Controls.Add(this.dtpDenSP);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
@@ -387,47 +421,31 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1134, 448);
             this.panel4.TabIndex = 68;
+            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
-            // dataGridViewTextBoxColumn1
+            // btnDT
             // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "Mã SP";
-            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.btnDT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.btnDT.ForeColor = System.Drawing.Color.White;
+            this.btnDT.Location = new System.Drawing.Point(595, 64);
+            this.btnDT.Name = "btnDT";
+            this.btnDT.Size = new System.Drawing.Size(145, 31);
+            this.btnDT.TabIndex = 68;
+            this.btnDT.Text = "Theo doanh thu";
+            this.btnDT.UseVisualStyleBackColor = false;
+            this.btnDT.Click += new System.EventHandler(this.btnDT_Click);
             // 
-            // dataGridViewTextBoxColumn2
+            // btnSLB
             // 
-            this.dataGridViewTextBoxColumn2.HeaderText = "Tên sản phẩm";
-            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            this.dataGridViewTextBoxColumn2.Width = 300;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.HeaderText = "Nhóm sản phẩm";
-            this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            this.dataGridViewTextBoxColumn3.Width = 150;
-            // 
-            // colSoLuong
-            // 
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.colSoLuong.DefaultCellStyle = dataGridViewCellStyle2;
-            this.colSoLuong.HeaderText = "Số lượng bán";
-            this.colSoLuong.MinimumWidth = 6;
-            this.colSoLuong.Name = "colSoLuong";
-            this.colSoLuong.ReadOnly = true;
-            // 
-            // colDoanhThu
-            // 
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.colDoanhThu.DefaultCellStyle = dataGridViewCellStyle3;
-            this.colDoanhThu.HeaderText = "Doanh thu";
-            this.colDoanhThu.MinimumWidth = 6;
-            this.colDoanhThu.Name = "colDoanhThu";
-            this.colDoanhThu.ReadOnly = true;
+            this.btnSLB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.btnSLB.ForeColor = System.Drawing.Color.White;
+            this.btnSLB.Location = new System.Drawing.Point(595, 27);
+            this.btnSLB.Name = "btnSLB";
+            this.btnSLB.Size = new System.Drawing.Size(143, 31);
+            this.btnSLB.TabIndex = 67;
+            this.btnSLB.Text = "Theo số lượng bán";
+            this.btnSLB.UseVisualStyleBackColor = false;
+            this.btnSLB.Click += new System.EventHandler(this.btnSLB_Click);
             // 
             // frm_BaoCaoDoanhSo
             // 
@@ -463,7 +481,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtTongTienSP;
         private System.Windows.Forms.Button btnXuatSP;
-        private System.Windows.Forms.Button btnXemSP;
         private System.Windows.Forms.DateTimePicker dtpDenSP;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.DateTimePicker dtpTuSP;
@@ -493,5 +510,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn colSoLuong;
         private System.Windows.Forms.DataGridViewTextBoxColumn colDoanhThu;
+        private System.Windows.Forms.Button btnDT;
+        private System.Windows.Forms.Button btnSLB;
     }
 }

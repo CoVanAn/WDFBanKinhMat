@@ -130,9 +130,11 @@ namespace WDFBanKinhMat
 
         private void btnBaoCao_Click(object sender, EventArgs e)
         {
-
-          //openChildForm(new frm_BaoCaoDoanhThu());
            openChildForm(new frm_MenuBaoCao());
+        }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
 
         }
     }
