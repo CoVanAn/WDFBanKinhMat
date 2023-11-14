@@ -140,5 +140,10 @@ namespace WDFBanKinhMat
                 Close();
             }
         }
+
+        private void btnKhachHang_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
